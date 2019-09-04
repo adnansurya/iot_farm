@@ -1,3 +1,4 @@
+
 <!-- Jquery Core Js -->
 <script src="plugins/jquery/jquery.min.js"></script>
 
@@ -18,3 +19,22 @@
 
 <!-- Demo Js -->
 <script src="js/demo.js"></script>
+
+<script>   
+    function setNavigation() {        
+        var path =  window.location.href.substr(window.location.href.lastIndexOf("/")+1);                      
+        $(".list a").each(function () {
+           
+            var href = $(this).attr('href');               
+            if (path == href) {                
+                $(this).parent().addClass('active');
+            }else{
+                $(this).parent().removeClass('active');
+            }
+        });
+    }
+    $(function () {
+        setNavigation();
+    });
+</script>
+
