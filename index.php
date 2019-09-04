@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Blank Page | Bootstrap Based Admin Template - Material Design</title>
+    <title>Home | IOT Farm</title>
     <?php require('partials/head.php'); ?>
 </head>
 
@@ -28,7 +28,65 @@
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>BLANK PAGE</h2>
+                <h2>DATA TANAMAN</h2>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                               SUHU UDARA
+                            </h2>                           
+                        </div>
+                        <div class="body">
+                            <p class="lead">
+                               36
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                               KELEMBABAN UDARA
+                            </h2>                           
+                        </div>
+                        <div class="body">
+                            <p class="lead">
+                               12
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                               PH TANAH
+                            </h2>                           
+                        </div>
+                        <div class="body">
+                            <p class="lead">
+                               2
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                              KELEMBABAN TANAH
+                            </h2>                           
+                        </div>
+                        <div class="body">
+                            <p class="lead">
+                               37
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
