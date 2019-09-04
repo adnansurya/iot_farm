@@ -28,11 +28,7 @@
     <section>
         <!-- Left Sidebar -->
         <?php require('partials/left_sidebar.php'); ?>
-        <!-- #END# Left Sidebar -->
-
-        <!-- Right Sidebar -->
-        <?php require('partials/right_sidebar.php'); ?>
-        <!-- #END# Right Sidebar -->
+        <!-- #END# Left Sidebar -->        
     </section>
 
     <section class="content">
