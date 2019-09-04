@@ -2,8 +2,6 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Blank Page | Bootstrap Based Admin Template - Material Design</title>
     <?php require('partials/head.php'); ?>
 </head>
@@ -20,7 +18,7 @@
     <!-- Top Bar -->
     <?php require('partials/top_bar.php'); ?>
     <!-- #Top Bar -->
-    
+
     <section>
         <!-- Left Sidebar -->
         <?php require('partials/left_sidebar.php'); ?>
