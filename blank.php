@@ -20,11 +20,7 @@
     <!-- Top Bar -->
     <?php require('partials/top_bar.php'); ?>
     <!-- #Top Bar -->
-
-    <!-- Search Bar -->
-    <?php require('partials/search_bar.php'); ?>
-    <!-- #END# Search Bar -->
-
+    
     <section>
         <!-- Left Sidebar -->
         <?php require('partials/left_sidebar.php'); ?>
