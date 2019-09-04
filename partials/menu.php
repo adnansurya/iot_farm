@@ -7,6 +7,12 @@
                 <span>Home</span>
             </a>
         </li>
+        <li>
+            <a href="settings.php">
+                <i class="material-icons">settings</i>
+                <span>Settings</span>
+            </a>
+        </li>
         
     </ul>
 </div>
