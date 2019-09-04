@@ -8,7 +8,7 @@
     <?php require('partials/head.php'); ?>
 </head>
 
-<body class="theme-red">
+<body class="theme-green">
     <!-- Page Loader -->
     <?php require('partials/page_loader.php'); ?>
     <!-- #END# Page Loader -->
