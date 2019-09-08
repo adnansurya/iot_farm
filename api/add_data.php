@@ -11,7 +11,7 @@ $ph_tanah = $_POST['ph_tanah'];
 $date = new DateTime("now", new DateTimeZone('Asia/Makassar') );
 $waktu = $date->format('Y-m-d H:i:s');
 
-$sql = "INSERT INTO monitoring(suhu_udara,lembab_udara,lembab_tanah,ph_tanah,waktu) VALUES ('$suhu_udara','$lembab_udara','$lembab_tanah','$ph_tanah','$waktu')";
+$sql = "INSERT INTO iot_farm_monitoring(suhu_udara,lembab_udara,lembab_tanah,ph_tanah,waktu) VALUES ('$suhu_udara','$lembab_udara','$lembab_tanah','$ph_tanah','$waktu')";
 
 if (mysqli_query($conn,$sql)){
 
