@@ -30,31 +30,12 @@
             <div class="block-header">
                 <h2>PENGATURAN</h2>
             </div>
-            <div class="row clearfix">
+            <div class="row clearfix">               
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="card">
                         <div class="header">
                             <h2>
-                               PUPUK
-                            </h2>                           
-                        </div>
-                        <div class="body">
-                            <div class="switch">
-                                <label>
-                                Off
-                                <input type="checkbox">
-                                <span class="lever"></span>
-                                On
-                                </label>
-                            </div>                           
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>
-                               PENYIRAMAN
+                               PENYIRAMAN OTOMATIS
                             </h2>                           
                         </div>
                         <div class="body">
