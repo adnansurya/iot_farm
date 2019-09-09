@@ -43,32 +43,34 @@
                             </h2>                           
                         </div>
                         <div class="body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Suhu Udara</th>
-                                        <th>Kelembaban Udara</th>
-                                        <th>Kelembaban Tanah</th>
-                                        <th>PH Tanah</th>
-                                        <th>Waktu</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php 
-                                        while ($row = mysqli_fetch_array($load)){
-                                            echo '<tr>';
-                                            echo '<td>'.$row['id'].'</td>';
-                                            echo '<td>'.$row['suhu_udara'].'</td>';
-                                            echo '<td>'.$row['lembab_udara'].'</td>';
-                                            echo '<td>'.$row['ph_tanah'].'</td>';
-                                            echo '<td>'.$row['lembab_tanah'].'</td>';
-                                            echo '<td>'.$row['waktu'].'</td>';
-                                            echo '</tr>';
-                                        }
-                                    ?>
-                                </tbody>
-                            </table>                           
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Suhu Udara</th>
+                                            <th>Kelembaban Udara</th>
+                                            <th>Kelembaban Tanah</th>
+                                            <th>PH Tanah</th>
+                                            <th>Waktu</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php 
+                                            while ($row = mysqli_fetch_array($load)){
+                                                echo '<tr>';
+                                                echo '<td>'.$row['id'].'</td>';
+                                                echo '<td>'.$row['suhu_udara'].'</td>';
+                                                echo '<td>'.$row['lembab_udara'].'</td>';
+                                                echo '<td>'.$row['ph_tanah'].'</td>';
+                                                echo '<td>'.$row['lembab_tanah'].'</td>';
+                                                echo '<td>'.$row['waktu'].'</td>';
+                                                echo '</tr>';
+                                            }
+                                        ?>
+                                    </tbody>
+                                </table>   
+                            </div>                                                    
                         </div>
                     </div>
                 </div>                
