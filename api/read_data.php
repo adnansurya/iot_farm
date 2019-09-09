@@ -1,7 +1,7 @@
 <?php 
 include 'db_access.php';
 
-$result = mysqli_query($conn,"SELECT * FROM iot_farm_monitoring ORDER BY id DESC");
+$result = mysqli_query($conn,"SELECT * FROM iot_farm_monitor ORDER BY id DESC");
 $rows = array();
 while($r = mysqli_fetch_assoc($result)) {
     $rows[] = $r;
