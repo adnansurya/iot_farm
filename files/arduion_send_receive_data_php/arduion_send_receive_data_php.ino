@@ -12,11 +12,11 @@
 #include <ESP8266HTTPClient.h>
  
 /* Set these to your desired credentials. */
-const char *ssid = "mantap";  //ENTER YOUR WIFI SETTINGS
-const char *password = "anuanuanu";
+const char *ssid = "Mantap";  //ENTER YOUR WIFI SETTINGS
+const char *password = "admin123";
  
 //Web/Server address to read/write from 
-const char *host = "192.168.43.153";   //https://circuits4you.com website or IP address of server
+const char *host = "192.168.0.100";   //https://circuits4you.com website or IP address of server
  
 //=======================================================================
 //                    Power on setup
@@ -26,7 +26,7 @@ void setup() {
   delay(1000);
 
   pinMode(D4, OUTPUT);
-  Serial.begin(115200);
+  Serial.begin(9600);
   WiFi.mode(WIFI_OFF);        //Prevents reconnection issue (taking too long to connect)
   delay(1000);
   WiFi.mode(WIFI_STA);        //This line hides the viewing of ESP as wifi hotspot
@@ -52,21 +52,24 @@ void setup() {
 //=======================================================================
 //                    Main Program Loop
 //=======================================================================
-int suhu = 0;
+float a = 1.1, b = 2.2, c = 3.3, d = 4.4;
 void loop() {
-  suhu++;
+
   HTTPClient http;    //Declare object of class HTTPClient
  
-  String ADCData, station, postData;
+  String suhu_udara, lembab_udara, lembab_tanah, ph_tanah, postData;
   int adcvalue=analogRead(A0);  //Read Analog value of LDR
-  ADCData = String(suhu);   //String to interger conversion
-  station = "A";
+  
+  suhu_udara = String(adcvalue);   //String to interger conversion
+  lembab_udara = String(a);
+  lembab_tanah = String(b);
+  ph_tanah = String(c);
  
   //Post Data
 //  postData = "status=" + ADCData + "&station=" + station ;
-  postData = "suhu=" + ADCData ;//
+  postData = "suhu_udara=" + suhu_udara +"&lembab_udara="+ lembab_udara + "&lembab_tanah="+ lembab_tanah + "&ph_tanah=" + ph_tanah ;
   
-  http.begin("http://192.168.43.153/iot/add_data.php");              //Specify request destination
+  http.begin("http://192.168.0.100/iot_farm/api/add_data.php");              //Specify request destination
   http.addHeader("Content-Type", "application/x-www-form-urlencoded");    //Specify content-type header
  
   int httpCode = http.POST(postData);   //Send the request
@@ -86,16 +89,17 @@ void loop() {
     return;
   }
 
-  String lampu1 = dataLog["hasil"][0]["status"];
+  String relay = dataLog["kontrol"][0]["value"]; 
   
-  Serial.println("DATA : " + lampu1);
+  Serial.println("DATA : " + relay);
 
-  if(lampu1 == "ON"){
+  if(relay == "ON"){
     digitalWrite(D4, HIGH);
-  }else if(lampu1 == "OFF"){
+  }else if(relay == "OFF"){
     digitalWrite(D4, LOW);
   }
   http.end();  //Close connection
-  
+
+  a++; b++; c++; d++;
   delay(5000);  //Post Data at every 5 seconds
 }

@@ -16,7 +16,7 @@ $sql = "INSERT INTO iot_farm_monitor(suhu_udara,lembab_udara,lembab_tanah,ph_tan
 if (mysqli_query($conn,$sql)){
 
     
-    include 'read_data.php';
+    include 'kontrol.php';
 }
 else{
 
