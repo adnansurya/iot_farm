@@ -89,17 +89,17 @@ void loop() {
     return;
   }
 
-  String relay = dataLog["kontrol"][0]["value"]; 
+  String pompa = dataLog["kontrol"][0]["value"]; 
   
-  Serial.println("DATA : " + relay);
+  Serial.println("DATA : " + pompa);
 
-  if(relay == "ON"){
-    digitalWrite(D4, HIGH);
-  }else if(relay == "OFF"){
+  if(pompa == "ON"){
     digitalWrite(D4, LOW);
+  }else if(pompa == "OFF"){
+    digitalWrite(D4, HIGH);
   }
   http.end();  //Close connection
 
   a++; b++; c++; d++;
-  delay(5000);  //Post Data at every 5 seconds
+  delay(1000);  //Post Data at every 5 seconds
 }

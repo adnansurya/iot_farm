@@ -42,7 +42,7 @@
                             <div class="switch">
                                 <label>
                                 Off
-                                <input type="checkbox">
+                                <input type="checkbox" id="pompaSw">
                                 <span class="lever"></span>
                                 On
                                 </label>
@@ -55,6 +55,44 @@
     </section>
 
     <?php require('partials/scripts.php'); ?>
+    <script>
+        $(function() {
+  // hooking event only on buttons, can do tr's as well.
+            $('#pompaSw').click(function(){
+                let params = 'pompa';
+                let switch_;
+                if($(this).prop('checked')){
+                    switch_ = 'ON';
+                }else{
+                    switch_ = 'OFF';
+                }
+                $.ajax({
+                url: 'api/update_settings.php',
+                type: 'post',
+                data: {
+                    params : params,
+                    value: switch_
+                },
+               
+                success: function(response){
+                    console.log(response);
+                    
+                    // if(response.success){
+                  
+                    //    console.log(response.message);
+                    // } else {
+                    //     console.log('gagal');
+                        
+                    // }
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                   console.log(textStatus);
+                             
+                }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

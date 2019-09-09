@@ -13,16 +13,12 @@ $waktu = $date->format('Y-m-d H:i:s');
 
 $sql = "INSERT INTO iot_farm_monitor(suhu_udara,lembab_udara,lembab_tanah,ph_tanah,waktu) VALUES ('$suhu_udara','$lembab_udara','$lembab_tanah','$ph_tanah','$waktu')";
 
-if (mysqli_query($conn,$sql)){
-
-    
+if (mysqli_query($conn,$sql)){    
     include 'kontrol.php';
 }
 else{
-
     echo "Terjadi Kesalahan.<br>";
-    echo $waktu;
-    
+    echo $waktu;  
 }
 
 ?>
