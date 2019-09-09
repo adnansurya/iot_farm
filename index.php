@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<?php require('api/db_access.php'); ?>
 <head>
     <title>Home | IOT Farm</title>
     <?php require('partials/head.php'); ?>
@@ -30,6 +30,10 @@
             <div class="block-header">
                 <h2>DATA TANAMAN</h2>
             </div>
+            <?php
+                $load = mysqli_query($conn, "SELECT * from iot_farm_monitor  ORDER BY id DESC LIMIT 1;");               
+                $last_row = mysqli_fetch_array($load);
+            ?>
             <div class="row clearfix">
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <div class="card">
@@ -40,7 +44,7 @@
                         </div>
                         <div class="body">
                             <p class="lead">
-                               36
+                                <?php echo $last_row['suhu_udara']; ?>
                             </p>                            
                         </div>
                     </div>
@@ -54,7 +58,7 @@
                         </div>
                         <div class="body">
                             <p class="lead">
-                               12
+                               <?php echo $last_row['lembab_udara']; ?>
                             </p>                            
                         </div>
                     </div>
@@ -68,7 +72,7 @@
                         </div>
                         <div class="body">
                             <p class="lead">
-                               2
+                                <?php echo $last_row['ph_tanah']; ?>
                             </p>                            
                         </div>
                     </div>
@@ -82,7 +86,7 @@
                         </div>
                         <div class="body">
                             <p class="lead">
-                               37
+                                <?php echo $last_row['lembab_tanah']; ?>
                             </p>                            
                         </div>
                     </div>
