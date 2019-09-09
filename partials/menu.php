@@ -8,6 +8,12 @@
             </a>
         </li>
         <li>
+            <a href="log.php">
+                <i class="material-icons">view_list</i>
+                <span>Log</span>
+            </a>
+        </li>
+        <li>
             <a href="settings.php">
                 <i class="material-icons">settings</i>
                 <span>Settings</span>

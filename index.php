@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<?php require('api/db_access.php'); ?>
 <head>
     <title>Home | IOT Farm</title>
+    <?php require('api/db_access.php'); ?>
     <?php require('partials/head.php'); ?>
 </head>
 
