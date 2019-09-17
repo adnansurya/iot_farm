@@ -39,14 +39,10 @@
                             </h2>                           
                         </div>
                         <div class="body">
-                            <div class="switch">
-                                <label>
-                                Off
-                                <input type="checkbox" id="pompaSw">
-                                <span class="lever"></span>
-                                On
-                                </label>
-                            </div>                           
+                             <label>
+                                <input type="checkbox" id="pompaSw" />
+                                <span>Aktif</span>
+                              </label>
                         </div>
                     </div>
                 </div>
@@ -59,7 +55,7 @@
         $(function() {
   // hooking event only on buttons, can do tr's as well.
             $('#pompaSw').click(function(){
-                let params = 'pompa';
+                let params = 'penyiraman';
                 let switch_;
                 if($(this).prop('checked')){
                     switch_ = 'ON';
