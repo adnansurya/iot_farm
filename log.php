@@ -62,8 +62,8 @@
                                                 echo '<td>'.$row['id'].'</td>';
                                                 echo '<td>'.$row['suhu_udara'].'</td>';
                                                 echo '<td>'.$row['lembab_udara'].'</td>';
-                                                echo '<td>'.$row['ph_tanah'].'</td>';
                                                 echo '<td>'.$row['lembab_tanah'].'</td>';
+                                                echo '<td>'.$row['ph_tanah'].'</td>';                                            
                                                 echo '<td>'.$row['waktu'].'</td>';
                                                 echo '</tr>';
                                             }
