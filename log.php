@@ -51,8 +51,11 @@
                                             <th>Suhu Udara</th>
                                             <th>Kelembaban Udara</th>
                                             <th>Kelembaban Tanah</th>
-                                            <th>PH Tanah</th>
+                                            <th>PH Tanah</th>                                            
                                             <th>Waktu</th>
+                                            <th>Gambar</th>
+                                            <th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -65,6 +68,7 @@
                                                 echo '<td>'.$row['lembab_tanah'].'</td>';
                                                 echo '<td>'.$row['ph_tanah'].'</td>';                                            
                                                 echo '<td>'.$row['waktu'].'</td>';
+                                                echo '<td><img src="gambar/'.$row['gambar'].'" alt="'.$row['waktu'].'" class="img-thumbnail"></td>';
                                                 echo '</tr>';
                                             }
                                         ?>
