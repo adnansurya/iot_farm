@@ -24,16 +24,16 @@
         <?php require('partials/left_sidebar.php'); ?>
         <!-- #END# Left Sidebar -->        
     </section>
-
+    <?php
+        $load = mysqli_query($conn, "SELECT * from iot_farm_monitor  ORDER BY id DESC LIMIT 1;");               
+        $last_row = mysqli_fetch_array($load);
+    ?>
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>DATA TANAMAN</h2>
+                <h2>DATA TANAMAN (Update Terakhir :  <?php echo $last_row['waktu']; ?>)</h2>
             </div>
-            <?php
-                $load = mysqli_query($conn, "SELECT * from iot_farm_monitor  ORDER BY id DESC LIMIT 1;");               
-                $last_row = mysqli_fetch_array($load);
-            ?>
+            
             <div class="row clearfix">
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <div class="card">
@@ -44,7 +44,7 @@
                         </div>
                         <div class="body">
                             <p class="lead">
-                                <?php echo $last_row['suhu_udara']; ?>
+                                <?php echo $last_row['suhu_udara']; ?> *C
                             </p>                            
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                         </div>
                         <div class="body">
                             <p class="lead">
-                               <?php echo $last_row['lembab_udara']; ?>
+                               <?php echo $last_row['lembab_udara']; ?> %
                             </p>                            
                         </div>
                     </div>
