@@ -6,7 +6,7 @@ if($local){
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "db_web";
+    $dbname = "id6774493_mksrobotics";
 }else{
     $servername = "localhost";
     $username = "id6774493_mksrobotics";

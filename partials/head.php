@@ -17,6 +17,10 @@
 <!-- Animation Css -->
 <link href="plugins/animate-css/animate.css" rel="stylesheet" />
 
+<!-- Datatables Css -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.css"/>
+
 <!-- Custom Css -->
 <link href="css/style.css" rel="stylesheet">
 

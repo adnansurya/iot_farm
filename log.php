@@ -44,7 +44,7 @@
                         </div>
                         <div class="body">
                             <div class="table-responsive">
-                                <table class="table">
+                                <table id="logTable" class="table">
                                     <thead>
                                         <tr>
                                             <th>No</th>
@@ -54,7 +54,7 @@
                                             <th>PH Tanah</th>                                            
                                             <th>Waktu</th>
                                             <th>Gambar</th>
-                                            <th>
+                                            
                                             
                                         </tr>
                                     </thead>
@@ -83,6 +83,14 @@
     </section>
 
     <?php require('partials/scripts.php'); ?>
+    <script>
+       
+            $('#logTable').DataTable({
+                responsive: true,
+                "order": [[ 0, "desc" ]]
+            });
+        
+    </script>
 </body>
 
 </html>
