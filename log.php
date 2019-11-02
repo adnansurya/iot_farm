@@ -84,11 +84,15 @@
 
     <?php require('partials/scripts.php'); ?>
     <script>
-       
+       $(document).ready(function() {
+
             $('#logTable').DataTable({
                 responsive: true,
                 "order": [[ 0, "desc" ]]
             });
+
+        });
+           
         
     </script>
 </body>

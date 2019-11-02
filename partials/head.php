@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
 <!-- Bootstrap Core Css -->
-<link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Waves Effect Css -->
 <link href="plugins/node-waves/waves.css" rel="stylesheet" />

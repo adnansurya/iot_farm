@@ -3,7 +3,7 @@
 <script src="plugins/jquery/jquery.min.js"></script>
 
 <!-- Bootstrap Core Js -->
-<script src="plugins/bootstrap/js/bootstrap.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <!-- DataTables Plugin Js -->
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
