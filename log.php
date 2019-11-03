@@ -54,7 +54,7 @@
                                             <th>PH Tanah</th>                                            
                                             <th>Waktu</th>
                                             <th>Gambar</th>
-                                            
+                                            <th>Action</th>
                                             
                                         </tr>
                                     </thead>
@@ -69,6 +69,7 @@
                                                 echo '<td>'.abs($row['ph_tanah']).'</td>';                                            
                                                 echo '<td>'.$row['waktu'].'</td>';
                                                 echo '<td><img src="gambar/'.$row['gambar'].'" alt="'.$row['waktu'].'" class="img-thumbnail"></td>';
+                                                echo "<td><a class='btn btn-danger' href='api/delete_data.php?id=".$row['id']."&gambar=".$row['gambar']."'>Hapus</a></td>";
                                                 echo '</tr>';
                                             }
                                         ?>
