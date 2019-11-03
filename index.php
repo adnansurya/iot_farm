@@ -72,7 +72,7 @@
                         </div>
                         <div class="body">
                             <p class="lead">
-                                <?php echo $last_row['ph_tanah']; ?>
+                                <?php echo abs($last_row['ph_tanah']); ?>
                             </p>                            
                         </div>
                     </div>

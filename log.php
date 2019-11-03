@@ -66,7 +66,7 @@
                                                 echo '<td>'.$row['suhu_udara'].' *C</td>';
                                                 echo '<td>'.$row['lembab_udara'].' %</td>';
                                                 echo '<td>'.$row['lembab_tanah'].'</td>';
-                                                echo '<td>'.$row['ph_tanah'].'</td>';                                            
+                                                echo '<td>'.abs($row['ph_tanah']).'</td>';                                            
                                                 echo '<td>'.$row['waktu'].'</td>';
                                                 echo '<td><img src="gambar/'.$row['gambar'].'" alt="'.$row['waktu'].'" class="img-thumbnail"></td>';
                                                 echo '</tr>';
