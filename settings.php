@@ -4,6 +4,7 @@
 <head>
     <title>Settings | IOT Farm</title>
     <?php require('partials/head.php'); ?>
+ 
 </head>
 
 <body class="theme-green">
@@ -39,24 +40,24 @@
                             </h2>                           
                         </div>
                         <div class="body">
-                        <div class="row">
-                            <label>
-                                <input type="checkbox" id="pompaSw">
-                                <span>Aktif</span>
-                            </label>
-                        </div>
+                        <!--<div class="row">-->
+                        <!--    <label>-->
+                        <!--        <input type="checkbox" id="pompaSw">-->
+                        <!--        <span>Aktif</span>-->
+                        <!--    </label>-->
+                        <!--</div>-->
                             <div class="row">
                                 <div class="col-md-6">  
                                     <p>Suhu Udara (Celcius)</p>                              
-                                    <input id="suhuUdaraTxt" type="number" min="0" max="59"/>
+                                    <input id="suhuUdaraTxt" class="form-control" type="number" min="0" max="59"/>
                                 </div>                                 
                                 <div class="col-md-6">
                                     <p>Kelembaban Udara (%)</p>
-                                    <input id="lembabUdaraTxt" type="number" min="0" max="59"/>
+                                    <input id="lembabUdaraTxt" class="form-control" type="number" min="0" max="59"/>
                                 </div> 
                                 <div class="col-md-12">
                                     <p>Kelembaban Tanah</p>
-                                    <input id="lembabTanahTxt" type="number" min="0" max="59"/>
+                                    <input id="lembabTanahTxt" class="form-control" type="number" min="0" max="59"/>
                                 </div>                              
                             </div>
                         </div>
@@ -71,10 +72,10 @@
                         </div>
                         <div class="body">
                         <div class="row">
-                                <div class="col-sm-3">
-                                   <input id="angkaTxt" type="number" min="0" max="59"/>
+                                <div class="col-md-3">
+                                   <input id="angkaTxt" class="form-control" type="number" min="0" max="59"/>
                                 </div>
-                                <div class="col-sm-9">
+                                <div class="col-md-9">
                                     <select id="waktuSel" class="form-control show-tick">
                                         <option value="" disabled>-- Please select --</option>
                                         <option value="sec">Detik</option>
@@ -163,12 +164,12 @@
             });
 
             let pompaStat = '<?php echo get_value($conn, 'penyiraman'); ?>';
-            if(pompaStat == 'ON'){
-                $('#pompaSw').prop('checked', true);
-            }else{
-                $('#pompaSw').prop('checked', false);
-            }
-            console.log(pompaStat);
+            // if(pompaStat == 'ON'){
+            //     $('#pompaSw').prop('checked', true);
+            // }else{
+            //     $('#pompaSw').prop('checked', false);
+            // }
+            // console.log(pompaStat);
             
             $('#pompaSw').click(function(){                
                 let switch_;
