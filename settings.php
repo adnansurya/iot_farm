@@ -57,7 +57,7 @@
                                 </div> 
                                 <div class="col-md-12">
                                     <p>Kelembaban Tanah</p>
-                                    <input id="lembabTanahTxt" class="form-control" type="number" min="0" max="59"/>
+                                    <input id="lembabTanahTxt" class="form-control" type="number" min="0" max="1024"/>
                                 </div>                              
                             </div>
                         </div>
