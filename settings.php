@@ -116,15 +116,7 @@
                 },
                
                 success: function(response){
-                    console.log(response);
-                    
-                    // if(response.success){
-                  
-                    //    console.log(response.message);
-                    // } else {
-                    //     console.log('gagal');
-                        
-                    // }
+                    console.log(response);                                    
                 },
                 error: function(xhr, textStatus, errorThrown) {
                    console.log(textStatus);
@@ -164,12 +156,6 @@
             });
 
             let pompaStat = '<?php echo get_value($conn, 'penyiraman'); ?>';
-            // if(pompaStat == 'ON'){
-            //     $('#pompaSw').prop('checked', true);
-            // }else{
-            //     $('#pompaSw').prop('checked', false);
-            // }
-            // console.log(pompaStat);
             
             $('#pompaSw').click(function(){                
                 let switch_;
