@@ -88,13 +88,23 @@
                                                     $status_tanah = 'Basah';
                                                 }
                                                 
+                                                $nilai_ph = abs(round($row['ph_tanah'],1));
+                                                if(intval($nilai_ph) < 7){
+                                                    $status_ph = 'Asam';
+                                                }else if(intval($nilai_ph) > 7){
+                                                    $status_ph = 'Basa';
+                                                }else{
+                                                    $status_ph = 'Netral';
+                                                }
+
+                                                                                                
                                                 echo '<tr>';
                                                 echo '<td>'.$row['id'].'</td>';
                                                 echo "<td><a class='btn btn-danger' href='api/delete_data.php?id=".$row['id']."&gambar=".$row['gambar']."'>Hapus</a></td>";
                                                 echo '<td>'.$row['suhu_udara'].' &#8451;<br>'.$status_suhu.'</td>';
                                                 echo '<td>'.$row['lembab_udara'].' %<br>'.$status_udara.'</td>';
                                                 echo '<td>'.$row['lembab_tanah'].'<br>'.$status_tanah.'</td>';
-                                                echo '<td>'.abs($row['ph_tanah']).'</td>';                                            
+                                                echo '<td>'.$nilai_ph.'<br>'.$status_ph.'</td>';                                            
                                                 echo '<td>'.$row['waktu'].'</td>';
                                                
                                                 echo '<td><img src="gambar/'.$row['gambar'].'" alt="'.$row['waktu'].'" class="img-thumbnail"></td>';                                               
