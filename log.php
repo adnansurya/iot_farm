@@ -25,7 +25,16 @@
         <?php require('partials/left_sidebar.php'); ?>
         <!-- #END# Left Sidebar -->        
     </section>
-
+        <?php 
+            $result_kontrol = mysqli_query($conn,"SELECT * FROM iot_farm_kontrol");
+            $rows_kontrol = array();
+            while($r_kontrol = mysqli_fetch_assoc($result_kontrol)) {
+                $rows_kontrol[] = $r_kontrol;
+            }
+            $limit_suhu = $rows_kontrol[1]['value'];
+            $limit_lembab_udara = $rows_kontrol[2]['value'];
+            $limit_lembab_tanah = $rows_kontrol[3]['value'];
+        ?>
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
@@ -61,12 +70,30 @@
                                     <tbody>
                                         <?php 
                                             while ($row = mysqli_fetch_array($load)){
+                                                if($row['suhu_udara'] >= $limit_suhu){
+                                                    $status_suhu = 'Panas';    
+                                                }else{
+                                                    $status_suhu = 'Dingin';
+                                                }
+                                                
+                                                if($row['lembab_udara'] <= $limit_lembab_udara){
+                                                    $status_udara = 'Kering';    
+                                                }else{
+                                                    $status_udara = 'Lembab';
+                                                }
+
+                                                if($row['lembab_tanah'] >= $limit_lembab_tanah){
+                                                    $status_tanah = 'Kering';    
+                                                }else{
+                                                    $status_tanah = 'Basah';
+                                                }
+                                                
                                                 echo '<tr>';
                                                 echo '<td>'.$row['id'].'</td>';
                                                 echo "<td><a class='btn btn-danger' href='api/delete_data.php?id=".$row['id']."&gambar=".$row['gambar']."'>Hapus</a></td>";
-                                                echo '<td>'.$row['suhu_udara'].' *C</td>';
-                                                echo '<td>'.$row['lembab_udara'].' %</td>';
-                                                echo '<td>'.$row['lembab_tanah'].'</td>';
+                                                echo '<td>'.$row['suhu_udara'].' &#8451;<br>'.$status_suhu.'</td>';
+                                                echo '<td>'.$row['lembab_udara'].' %<br>'.$status_udara.'</td>';
+                                                echo '<td>'.$row['lembab_tanah'].'<br>'.$status_tanah.'</td>';
                                                 echo '<td>'.abs($row['ph_tanah']).'</td>';                                            
                                                 echo '<td>'.$row['waktu'].'</td>';
                                                
